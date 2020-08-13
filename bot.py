@@ -67,11 +67,19 @@ async def igstory():
                     takentime = i['taken_at_timestamp']
                     if story_id not in id_list:
                         try:
-                            await channel.send(i['video_resources'][len(i['video_resources']) - 1]['src'])
+                            embed = discord.Embed(title=name,
+                                                  description='影片',
+                                                  url=i['video_resources'][len(i['video_resources']) - 1]['src'],
+                                                  color=0xd327a5)
+                            embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
+                            embed.set_image(url=i['display_url'])
+                            await channel.send(embed=embed)
+                            # await channel.send(i['video_resources'][len(i['video_resources']) - 1]['src'])
                             # pass
                         except KeyError:
                             # pass
                             embed = discord.Embed(title=name,
+                                                  description='照片',
                                                   url=i['display_url'],
                                                   color=0xd327a5)
                             embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
