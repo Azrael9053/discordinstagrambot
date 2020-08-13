@@ -68,7 +68,7 @@ async def igstory():
                     if story_id not in id_list:
                         try:
                             embed = discord.Embed(title=name,
-                                                  description='影片',
+                                                  description=f'來自{name}的影片',
                                                   url=i['video_resources'][len(i['video_resources']) - 1]['src'],
                                                   color=0xd327a5)
                             embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
@@ -79,7 +79,7 @@ async def igstory():
                         except KeyError:
                             # pass
                             embed = discord.Embed(title=name,
-                                                  description='照片',
+                                                  description=f'來自{name}的照片',
                                                   url=i['display_url'],
                                                   color=0xd327a5)
                             embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
