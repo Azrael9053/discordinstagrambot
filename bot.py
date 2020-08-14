@@ -64,7 +64,7 @@ async def igstory():
             try:
                 for i in story_data['data']['reels_media'][0]['items']:
                     story_id = i['id']
-                    takentime = i['taken_at_timestamp']
+                    takentime = i['taken_at_timestamp']+28800
                     if story_id not in id_list:
                         try:
                             embed = discord.Embed(title=name,
@@ -90,8 +90,7 @@ async def igstory():
             except IndexError:
                 pass
 
-        await asyncio.sleep(3600)
-        await asyncio.sleep(random.randint(0, 30))
+        await asyncio.sleep(random.randint(3500, 3700))
 bot.loop.create_task(igstory())
 
 bot.run('NzIyMDY2NDIyNTY5NzYyOTU3.Xudqwg.ENFlFRnSqTYJf9Dg4g7yQUNHBeA')
