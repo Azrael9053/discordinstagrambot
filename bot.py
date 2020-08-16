@@ -70,9 +70,9 @@ async def igstory():
                             embed = discord.Embed(title=name,
                                                   description=f'來自{name}限時動態的影片',
                                                   url=i['video_resources'][len(i['video_resources']) - 1]['src'],
-                                                  timestamp=datetime.datetime.fromtimestamp(takentime),
+                                                  # timestamp=datetime.datetime.fromtimestamp(takentime),
                                                   color=0xd327a5)
-                            # embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
+                            embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
                             embed.set_image(url=i['display_url'])
                             await channel.send(embed=embed)
                             # pass
@@ -81,9 +81,9 @@ async def igstory():
                             embed = discord.Embed(title=name,
                                                   description=f'來自{name}限時動態的照片',
                                                   url=i['display_url'],
-                                                  timestamp=datetime.datetime.fromtimestamp(takentime),
+                                                  # timestamp=datetime.datetime.fromtimestamp(takentime),
                                                   color=0xd327a5)
-                            # embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
+                            embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
                             embed.set_image(url=i['display_url'])
                             await channel.send(embed=embed)
                         requests.get('https://docs.google.com/forms/u/0/d/e/1FAIpQLSeK6MTUl4pYTFQBcEfO631scZDgpwc0YHZ-1NtQ8gYk6YICKg/formResponse?entry.9634692=' + story_id + '&fvv=1&draftResponse=%5Bnull%2Cnull%2C%22-2039842183786340156%22%5D%0D%0A&pageHistory=0&fbzx=-2039842183786340156')
