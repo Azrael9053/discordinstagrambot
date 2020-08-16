@@ -9,8 +9,7 @@ import random
 import datetime
 
 headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'}
-cookies = {'urlgen':'"{\"2001:b011:d004:1d66:b533:ce46:cdca:8459\": 3462\054 \"2001:b011:d004:32af:bda7:46c0:8724:4b4b\": 3462\054 \"180.217.202.155\": 24157\054 \"2001:b011:d004:3ac0:b5f7:81ac:b0be:3179\": 3462}:1k5sPy:66Q9ah_-dJGxae4ViS6_CnKvxt8"', 'csrftoken':'1URzCuiIuRnvDxE3wkE2BZ6ETxjUppU7', 'fbsr_124024574287414':'-KHFfXl0c8tXYJTEAp8fv14C92XOflBSxg8wxtCkl9w.eyJ1c2VyX2lkIjoiMTAwMDAzOTYxNDMwOTY5IiwiY29kZSI6IkFRQTFqYjhLRVl5WThUdkRWTUFkdU95dWNka1dvb0RIeVpvbXlMYUwtTmQwT29iaEJLc1hLYzVibWI1UUkyTFRuclRaMmt2TkJIREk5OFdWRGNTSVlTbm15SHlFb3RuY3lMQmlUQ2ZLS0ZNdjFoQXM0YkZJUi01YTlvblBkX2dac0FQVmZTMmVTQ0cyM3lxUm9OMFVYNmR2c08tWFJyX256RVhfVE4yeGh6Y3kxd0ZYcTVmV0xqa29iM2VrUE5CYkFIOEJVOVBXV1ZOVklCUkUzZzh3U0FOdXJCeldMUWhoWWg2bkpCQUdxX3ptS0M3VGNaSnQxNWVzS2d5RzJyYW54UUhRQVVjWUFod3d6TFVETnRkZFZCZWZWem1uMnhjSTlGTmVSZGxzUWhodjVELUF0WFhVeEdXZm1yNVl3X1pHdkpSaGRKYVo4OVk4WW5NUm9HaHNRdTJpWl9aLW5BejJObEpoWndDclZwOURIZyIsIm9hdXRoX3Rva2VuIjoiRUFBQnd6TGl4bmpZQkFIdklXNDU5Z3RxeDA2MnBxU0tOV3F3Um85TWJROVJHaHA1bDRPeTA3aTBYeEtWamhOQXFmaE56MVpBVGhzc3J6MkNOVG11M3JQb0V3aUJBd2gwdXFlc2s0NlpDQ0ZaQVVIbnpXWkFHQXFCejZBOFlaQ3dRWXJhYXphVFpBdm9oYU8wdWFiU0ZVTlV0aWdxN1pDWGtxbEdxSFczY2taQ0RTVkpoUzBxalpDeXNDIiwiYWxnb3JpdGhtIjoiSE1BQy1TSEEyNTYiLCJpc3N1ZWRfYXQiOjE1OTcyNDQ4ODB9', 'rur':'ATN', 'fbm_124024574287414':'base_domain=.instagram.com', 'shbid':'19998', 'ds_user_id':'2025572310', 'ig_did':'ATN', 'shbid':'4B28AB76-ABC1-4355-B559-035560F6B555', 'sessionid':'2025572310%3AuNrJgyEPuM4Mua%3A14', 'mid':'XOJfwQALAAF16c-sL-7SerjK3buf', 'shbts':'1597071477.4778078'}
-bot = commands.Bot(command_prefix='!')
+cookies = {yourcookies)
 
 @bot.event
 async def on_ready():
@@ -18,7 +17,7 @@ async def on_ready():
 
 async def igstory():
     await bot.wait_until_ready()
-    channel = bot.get_channel(741147398587285524)
+    channel = bot.get_channel(channel_ID)
     name_list = []
     memeber = json.loads(requests.get('https://spreadsheets.google.com/feeds/cells/14JdHOAcG_RlDXh34o0FonQVHhOVqVNJpj_9jjQCdtYY/1/public/values?alt=json').text)
     memeber_len = len(memeber['feed']['entry'])-1
@@ -93,4 +92,4 @@ async def igstory():
         await asyncio.sleep(random.randint(3500, 3700))
 bot.loop.create_task(igstory())
 
-bot.run('NzIyMDY2NDIyNTY5NzYyOTU3.Xudqwg.ENFlFRnSqTYJf9Dg4g7yQUNHBeA')
+bot.run('bot_token')
