@@ -2,6 +2,7 @@ aiohttp==3.6.2
 altgraph==0.16.1
 APScheduler==3.6.1
 arrow==0.15.8
+asgiref==3.2.10
 astroid==2.2.5
 async-timeout==3.0.1
 atomicwrites==1.3.0
@@ -20,9 +21,10 @@ coverage==5.1
 datatype==0.8.5
 dateparser==0.7.6
 discord==1.0.1
-discord.py==1.3.4
+discord.py==1.5.0
 dj-database-url==0.5.0
 dj-static==0.0.6
+Django==3.1
 doctools==0.2.2
 Eel==0.13.2
 Flask==1.1.1
@@ -71,7 +73,6 @@ pyasn1-modules==0.2.8
 pycparser==2.20
 pycryptodome==3.9.0
 pygsheets==2.0.3.1
-pyinstaller==3.4
 pylint==2.3.1
 pyparsing==2.4.7
 PySocks==1.7.1
@@ -80,15 +81,14 @@ pytest-cov==2.8.1
 python-dateutil==2.8.1
 pytz==2019.3
 PyUserInput==0.1
-pywin32-ctypes==0.2.0
 regex==2020.7.14
 requests==2.22.0
 requests-oauthlib==1.3.0
 rsa==4.6
 schedule==0.6.0
-selenium==3.141.0
 six==1.12.0
 soupsieve==1.9.2
+sqlparse==0.3.1
 static3==0.7.0
 streamlink==1.2.0
 times==0.7
