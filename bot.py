@@ -73,17 +73,6 @@ async def igstory():
                 link = 'https://www.instagram.com/p/' + post['shortcode']
                 if post_id not in id_list:
                     requests.get('https://docs.google.com/forms/u/0/d/e/1FAIpQLSeK6MTUl4pYTFQBcEfO631scZDgpwc0YHZ-1NtQ8gYk6YICKg/formResponse?entry.9634692=' + post_id + '&fvv=1&draftResponse=%5Bnull%2Cnull%2C%22-2039842183786340156%22%5D%0D%0A&pageHistory=0&fbzx=-2039842183786340156')
-                    # print(link)
-                    # await channel.send(link)
-                    # if name == 'chiali_akb48teamtp' and zcount == 0:
-                    #     zcount = 1
-                    #     # await channel.send(zackaid + ' 栗子貼文提醒')
-                    # elif name == 'hello__iamprincess' and pcount == 0:
-                    #     pcount = 1
-                    #     await channel.send(pokoid + ' 格格貼文提醒')
-                    # elif name == 'chen4ya_akb48teamtp' and pcount == 0:
-                    #     pcount = 1
-                    #     await channel.send(pokoid + ' 格格貼文提醒')
             story_url = 'https://www.instagram.com/graphql/query/?query_hash=90709b530ea0969f002c86a89b4f2b8d&variables=%7B%22reel_ids%22%3A%5B%22' + reel_id + '%22%5D%2C%22tag_names%22%3A%5B%5D%2C%22location_ids%22%3A%5B%5D%2C%22highlight_reel_ids%22%3A%5B%5D%2C%22precomposed_overlay%22%3Afalse%2C%22show_story_viewer_list%22%3Atrue%2C%22story_viewer_fetch_count%22%3A50%2C%22story_viewer_cursor%22%3A%22%22%2C%22stories_video_dash_manifest%22%3Afalse%7D'
             r = requests.get(story_url, headers=headers, cookies=cookies1).text
             story_data = json.loads(r)
@@ -113,15 +102,6 @@ async def igstory():
                             embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
                             embed.set_image(url=i['display_url'])
                         #     await channel.send(embed=embed)
-                        # if name == 'chiali_akb48teamtp' and zcount == 0:
-                        #     zcount = 1
-                        #     # await channel.send(zackaid + ' 栗子限時動態提醒')
-                        # elif name == 'hello__iamprincess' and pcount == 0:
-                        #     pcount = 1
-                        #     await channel.send(pokoid + ' 格格限時動態提醒')
-                        # elif name == 'chen4ya_akb48teamtp' and pcount == 0:
-                        #     pcount = 1
-                        #     await channel.send(pokoid + ' 格格限時動態提醒')
                         requests.get('https://docs.google.com/forms/u/0/d/e/1FAIpQLSeK6MTUl4pYTFQBcEfO631scZDgpwc0YHZ-1NtQ8gYk6YICKg/formResponse?entry.9634692=' + story_id + '&fvv=1&draftResponse=%5Bnull%2Cnull%2C%22-2039842183786340156%22%5D%0D%0A&pageHistory=0&fbzx=-2039842183786340156')
             except IndexError:
                 pass
@@ -164,9 +144,6 @@ async def igstory():
                     requests.get('https://docs.google.com/forms/u/0/d/e/1FAIpQLSeK6MTUl4pYTFQBcEfO631scZDgpwc0YHZ-1NtQ8gYk6YICKg/formResponse?entry.9634692=' + post_id + '&fvv=1&draftResponse=%5Bnull%2Cnull%2C%22-2039842183786340156%22%5D%0D%0A&pageHistory=0&fbzx=-2039842183786340156')
                     # print(post_text)
                     await channel.send(embed=embed)
-                    if name == 'raisu_riceballfamily' and zcount == 0:
-                        zcount = 1
-                        # await channel.send(zackaid + ' 最愛的雅哇啦發文拉還不快看')
             story_url = 'https://www.instagram.com/graphql/query/?query_hash=90709b530ea0969f002c86a89b4f2b8d&variables=%7B%22reel_ids%22%3A%5B%22' + reel_id + '%22%5D%2C%22tag_names%22%3A%5B%5D%2C%22location_ids%22%3A%5B%5D%2C%22highlight_reel_ids%22%3A%5B%5D%2C%22precomposed_overlay%22%3Afalse%2C%22show_story_viewer_list%22%3Atrue%2C%22story_viewer_fetch_count%22%3A50%2C%22story_viewer_cursor%22%3A%22%22%2C%22stories_video_dash_manifest%22%3Afalse%7D'
             r = requests.get(story_url, headers=headers, cookies=cookies1).text
             story_data = json.loads(r)
@@ -196,9 +173,6 @@ async def igstory():
                             embed.set_footer(text=datetime.datetime.fromtimestamp(takentime))
                             embed.set_image(url=i['display_url'])
                             await channel.send(embed=embed)
-                        if name == 'raisu_riceballfamily' and zcount == 0:
-                            zcount = 1
-                            # await channel.send(zackaid + ' 最愛的雅哇啦發限時動態拉還不快看')
                         requests.get('https://docs.google.com/forms/u/0/d/e/1FAIpQLSeK6MTUl4pYTFQBcEfO631scZDgpwc0YHZ-1NtQ8gYk6YICKg/formResponse?entry.9634692=' + story_id + '&fvv=1&draftResponse=%5Bnull%2Cnull%2C%22-2039842183786340156%22%5D%0D%0A&pageHistory=0&fbzx=-2039842183786340156')
             except IndexError:
                 pass
